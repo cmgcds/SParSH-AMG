@@ -21,7 +21,7 @@ Key features of library are:
 - [Building Package and Quick start guide](##Building Package and Quick start guide)
 - [Further Reading and Documentation](##Further Reading and Documentation)
 
-<h2> Dependencies and Requirements
+<h2> Dependencies and Requirements </h2>
 
 In order to build library, user would need the CMake, CUDA Toolkit and Intel MKL
 Recommended Versions: CMake >= 3.9 , CUDA Toolkit 10.0, Intel® Math Kernel Library 2020 
