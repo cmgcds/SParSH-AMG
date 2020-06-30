@@ -1,6 +1,6 @@
 # SParSH: Scalable PARallel numerics for Heterogeneous systems 
 
-## A Library for Hybrid CPU-GPU Algebraic Multigrid and Preconditioned Iterative Methods
+#### A Library for Hybrid CPU-GPU Algebraic Multigrid and Preconditioned Iterative Methods
 
 <p align="justify"> SParSH is hybrid CPU-GPU based solver library featuring parallel Algebraic Multigrid (AMG) solvers and preconditioners for solving large sparse linear system of equations. The library provides implementations of AMG as solver and AMG-preconditioned Krylov subspace solvers for multicore CPU and single node CPU-GPU based computing environments. These implementations utilize hybrid CPU-GPU based approaches to accelerate solving of sparse linear systems. The SParSH package offers flexibility to construct required solver and preconditioner which can be integrated into existing scientific applications.       
 
@@ -17,17 +17,15 @@ Key features of library are:
 
 ## Table of Contents
 
-- [Dependencies and Requirements](#dependencies-and-requirements)
-- [Building Package and Quick start guide](#building-package-and-quick-start-guide)
-- [Further Reading and Documentation](#further-reading-and-documentation)
+- [Dependencies and Requirements](#depend)
+- [Building Package and Quick start guide](#build)
+- [Further Reading and Documentation](#further)
 
-<h2> Dependencies and Requirements </h2>
-
+## <a name="depend"></a>Dependencies and Requirements 
 In order to build library, user would need the CMake, CUDA Toolkit and Intel MKL
 Recommended Versions: CMake >= 3.9 , CUDA Toolkit 10.0, Intel® Math Kernel Library 2020 
 
-<h2> Building Package and Quick start guide </h2> <a name="build"></a>
-
+## <a name="build"></a>Building Package and Quick start guide 
 Following steps lists the procedure by which one can use library in existing cmake project
 
 1. Specify the following in CMakeLists.txt 
@@ -93,9 +91,7 @@ Following steps lists the procedure by which one can use library in existing cma
      //b: double array which holds rhs of Ax=b linear system
      //x: solution array
      AMG_Solver_1(*A,b,x);
-     ```
-
-   ​         
+     ```       
 
 4. Specify the following linker flags along with your existing linker flags in CMakeLists.txt
    Also specify the link libraries in the following order with your existing libraries in CMakeLists.txt
@@ -110,7 +106,7 @@ Following steps lists the procedure by which one can use library in existing cma
 
 CMakeList.txt in the main repository builds an example project from main.cpp which reads matrix from input file which is in matrix market format and calls the solver routine.  
 
-<h3> Further reading and Documentation </h3> <a name="further"></a>
+## <a name="further"></a> Further reading and Documentation
 
 Header file AMG.hpp provides access to the solver parameters which can be modified as per requirements. It includes declaration of available solver routines and their description. 
 
