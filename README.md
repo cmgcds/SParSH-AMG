@@ -17,9 +17,9 @@ Key features of library are:
 
 ## Table of Contents
 
-- [Dependencies and Requirements](##Dependencies and Requirements)
-- [Building Package and Quick start guide](##Building Package and Quick start guide)
-- [Further Reading and Documentation](##Further Reading and Documentation)
+- [Dependencies and Requirements](#dependencies-and-requirements)
+- [Building Package and Quick start guide](#building-package-and-quick-start-guide)
+- [Further Reading and Documentation](#further-reading-and-documentation)
 
 <h2> Dependencies and Requirements </h2>
 
