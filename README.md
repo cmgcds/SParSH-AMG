@@ -109,6 +109,3 @@ CMakeList.txt in the main repository builds an example project from main.cpp whi
 ## <a name="further"></a> Further reading and Documentation
 
 Header file AMG.hpp provides access to the solver parameters which can be modified as per requirements. It includes declaration of available solver routines and their description. 
-
-Detailed description of hybrid approaches implemented can be found in the following arxiv paper: paper link to add
-
