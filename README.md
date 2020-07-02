@@ -109,3 +109,4 @@ CMakeList.txt in the main repository builds an example project from main.cpp whi
 ## <a name="further"></a> Further reading and Documentation
 
 Header file AMG.hpp provides access to the solver parameters which can be modified as per requirements. It includes declaration of available solver routines and their description. 
+Detailed description of hybrid CPU-GPU approaches can be found in following arXiv paper: [SParSH-AMG: A library for hybrid CPU-GPU algebraic multigrid and preconditioned iterative methods](https://arxiv.org/abs/2007.00056)
