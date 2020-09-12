@@ -11,7 +11,7 @@
 using namespace std;
 
 //AMG as solver with Jacobi as smoother
-void AMG_Solver_1(sp_matrix_mg& A,double* &b,double* &x)
+void AMG_Solver_CPU_baseline(sp_matrix_mg& A,double* &b,double* &x)
 {
     AMG_solver* C_Solver   = new AMG_solver();
     double t1 = omp_get_wtime();
@@ -237,7 +237,7 @@ void Solver_PCG_2(sp_matrix_mg& A,double* &b,double* &x)
 
 
 //AMG as solver with Hybrid AMG 1 Approach
-void AMG_Solver_3(sp_matrix_mg& A,double* &b,double* &x)
+void AMG_Solver_CPU_GPU_CI(sp_matrix_mg& A,double* &b,double* &x)
 {
     AMG_GPU_solver* C_Solver   = new AMG_GPU_solver();
     double t1 = omp_get_wtime();
@@ -253,7 +253,7 @@ void AMG_Solver_3(sp_matrix_mg& A,double* &b,double* &x)
 
 
 //AMG as solver with Hybrid AMG 2 Approach
-void AMG_Solver_4(sp_matrix_mg& A,double* &b,double* &x)
+void AMG_Solver_CPU_GPU_MI(sp_matrix_mg& A,double* &b,double* &x)
 {
     AMG_GPU1_solver* C_Solver   = new AMG_GPU1_solver();
     double t1 = omp_get_wtime();

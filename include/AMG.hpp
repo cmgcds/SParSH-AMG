@@ -13,7 +13,7 @@
 /* Parameters*/
 
 #define th 2                           //Number of OpenMP Threads to be used in solver
-#define omega 1.66667                  //Relaxation Factor in Jacobi and Gauss-Siedal Smoother
+#define omega 0.66667                  //Relaxation Factor in Jacobi and Gauss-Siedal Smoother
 #define nsmooth 6                      //Number of smoothing iterations
 #define tol1 1e-8                      //Tolerance of Solver                          
 #define limit_upper 4000               //Upper Limit on coarse level system size
@@ -37,7 +37,7 @@ void read_coo_new_format(char *matrixfile,sp_matrix_mg *&A,double *&b);
 //Solvers
 
 //AMG as solver with Jacobi as smoother
-void AMG_Solver_1(sp_matrix_mg& A,double* &b,double* &x);
+void AMG_Solver_CPU_baseline(sp_matrix_mg& A,double* &b,double* &x);
 
 //AMG as solver with SOR as smoother
 void AMG_Solver_2(sp_matrix_mg& A,double* &b,double* &x);
@@ -61,10 +61,10 @@ void Solver_PCG_3(sp_matrix_mg& A,double* &b,double* &x);
 void Solver_PCG_4(sp_matrix_mg& A,double* &b,double* &x);
 
 //AMG as solver with Hybrid AMG 1 Approach
-void AMG_Solver_3(sp_matrix_mg& A,double* &b,double* &x);
+void AMG_Solver_CPU_GPU_CI(sp_matrix_mg& A,double* &b,double* &x);
 
 //AMG as solver with Hybrid AMG 2 Approach
-void AMG_Solver_4(sp_matrix_mg& A,double* &b,double* &x);
+void AMG_Solver_CPU_GPU_MI(sp_matrix_mg& A,double* &b,double* &x);
 
 //BiCGStab as Solver
 void Solver_BiCG_1(sp_matrix_mg& A,double* &b,double* &x);

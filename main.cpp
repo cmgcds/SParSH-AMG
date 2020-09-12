@@ -12,8 +12,6 @@ using namespace std;
 
 int main(int n,char *argv[])
 {
-    //cout<<"FE Type Testing"<<endl;
-	
     //Initialization
 	sp_matrix_mg* A = new sp_matrix_mg();
 	double *b;
@@ -24,16 +22,16 @@ int main(int n,char *argv[])
 	A->sp_matrix_fill_diagonal();
 	
 	cout<<"Matrix Size\t"<<A->nrow<<endl;
-	//AMG_Solver_1(*A,b,x);
+	AMG_Solver_CPU_GPU_CI(*A,b,x);
 
 	std::fill(x,x+A->nrow,0);
-	//Solver_CG_1(*A,b,x);
+	AMG_Solver_CPU_GPU_MI(*A,b,x);
 
     std::fill(x,x+A->nrow,0);
-	//Solver_BiCG_1(*A,b,x);
+	AMG_Solver_CPU_baseline(*A,b,x);
     
     std::fill(x,x+A->nrow,0);
-    coarsening_2(*A,b,x);
+    //coarsening_2(*A,b,x);
     
 	//std::fill(x,x+A->nrow,0);
 	//AMG_Solver_4(*A,b,x);
